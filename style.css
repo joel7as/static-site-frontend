@@ -1,0 +1,143 @@
+@import url('https://www.resume.lol/fonts/cm/fonts.css');
+
+/* Letter-size page container */
+body {
+  background: #eee;
+  padding: 1in 1rem;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* or center */
+  min-height: 100vh;
+  font-family: "Computer Modern Serif", serif;
+  font-size: 10pt;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+.page {
+  width: 816px; /* 8.5in at 96dpi */
+  min-height: 1056px; /* at least letter height */
+  background: white;
+  padding: 0.5in;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  overflow: visible; /* so nothing clipped */
+  box-sizing: border-box;
+}
+
+/* Headings */
+
+h1 {
+  text-align: center;
+  font-size: 18pt;
+  margin: 0;
+  padding: 0;
+  margin-top: -0.1in;
+  color: black;
+}
+
+h2 {
+  border-bottom: 1px solid #000;
+  text-transform: uppercase;
+  font-size: 9pt;
+  margin: 5pt 0;
+  color: black;
+}
+
+h2::first-letter {
+  font-size: 12pt;
+}
+
+h3 {
+  display: flex;
+  font-size: 11pt;
+  margin: 8px 0 4px 0;
+  font-weight: bold;
+  align-items: center;
+  color: black;
+}
+
+h3 span:not(.tech-stack):not(.normal) {
+  white-space: nowrap;
+}
+
+h3 .tech-stack {
+  font-weight: normal;
+  font-style: italic;
+  margin-left: 6px;
+  white-space: nowrap;
+  color: black;
+}
+
+h3 .normal {
+  font-weight: bold;   /* bold dates */
+  margin-left: auto;
+  font-style: normal;
+  white-space: nowrap;
+  color: black;
+}
+
+h4 {
+  display: flex;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: italic;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  justify-content: space-between;
+  color: black;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+a {
+  color: black;
+  text-underline-offset: 3px;
+  text-decoration: underline;  /* underline links */
+}
+
+ul {
+  margin: 1pt 0 5pt 0.3in;
+  padding: 0 24px;
+  font-size: 11pt;
+  color: black;
+}
+
+ul > li {
+  margin-bottom: 1pt;
+}
+
+.indent {
+  margin-left: 0.15in;
+}
+
+.spacer {
+  margin: 0 auto;
+}
+
+.headerInfo ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.headerInfo ul li {
+  white-space: pre;
+  list-style: none;
+}
+
+.headerInfo ul li:not(:last-child)::after {
+  content: "|";
+  margin: 0 8px;
+}
+
+@page {
+  size: letter;
+  margin: 0.5in;
+}
